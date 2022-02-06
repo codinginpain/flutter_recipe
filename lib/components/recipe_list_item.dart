@@ -12,7 +12,10 @@ class RecipeListItem extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Image.asset("assets/images/$imageName.jpeg"),
+          AspectRatio(
+            aspectRatio: 2 / 1,
+            child: Image.asset("assets/images/$imageName.jpeg"),
+          ),
           SizedBox(height: 10),
           Text(
             "$title",
