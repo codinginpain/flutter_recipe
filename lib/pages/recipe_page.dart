@@ -14,8 +14,7 @@ class RecipePage extends StatelessWidget {
       appBar: _buildRecipeAppBar(),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+        child: ListView(
           children: [
             RecipeTitle(),
             RecipeMenu(),
@@ -30,7 +29,7 @@ class RecipePage extends StatelessWidget {
 
   AppBar _buildRecipeAppBar() => AppBar(
         backgroundColor: Colors.white,
-        elevation: 1.0,
+        elevation: 2.0,
         actions: [
           Icon(CupertinoIcons.search, color: Colors.black),
           SizedBox(width: 15),

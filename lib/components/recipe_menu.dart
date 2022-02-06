@@ -5,16 +5,19 @@ class RecipeMenu extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(top: 20),
-      child: Row(
-        children: [
-          _buildMenuItem(Icons.food_bank, "ALL"),
-          SizedBox(width: 25),
-          _buildMenuItem(Icons.emoji_food_beverage, 'Coffee"'),
-          SizedBox(width: 25),
-          _buildMenuItem(Icons.fastfood, "Burger"),
-          SizedBox(width: 25),
-          _buildMenuItem(Icons.local_pizza, "Pizza"),
-        ],
+      child: SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
+        child: Row(
+          children: [
+            _buildMenuItem(Icons.food_bank, "ALL"),
+            SizedBox(width: 25),
+            _buildMenuItem(Icons.emoji_food_beverage, 'Coffee"'),
+            SizedBox(width: 25),
+            _buildMenuItem(Icons.fastfood, "Burger"),
+            SizedBox(width: 25),
+            _buildMenuItem(Icons.local_pizza, "Pizza"),
+          ],
+        ),
       ),
     );
   }
