@@ -14,7 +14,13 @@ class RecipeListItem extends StatelessWidget {
         children: [
           AspectRatio(
             aspectRatio: 2 / 1,
-            child: Image.asset("assets/images/$imageName.jpeg"),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(20),
+              child: Image.asset(
+                  "assets/images/$imageName.jpeg",
+                  fit: BoxFit.cover),
+            ),
+
           ),
           SizedBox(height: 10),
           Text(
